@@ -1,0 +1,13 @@
+# Migration Flow
+
+# design a schema in the schema editor tool
+# create db with rake db:create
+# make migration files to have a schema in your db
+# make a timestamp rake db:timestamp
+# create a file touch db/migrate/20250123093106_add_rating_to_restaurants.rb
+# in the file:
+# make a class with the same name as the file (no timestamp) class AddRatingToRestaurant
+# inherit form AR ActiveRecord::Migration[7.0]
+# define the change method
+# use AR methods to make schema changes
+# rake db:migrate
